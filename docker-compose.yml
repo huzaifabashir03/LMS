@@ -28,7 +28,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      MONGO_URI: mongodb://admin:password123@mongodb:27017/smart_student_portal
+      MONGO_URI: mongodb+srv://huzaifabashir444_db_user:lVjcYOGNx0JdhB8E@cluster0.mongodb.net/smart_student_portal?retryWrites=true&w=majority
       JWT_SECRET: dev_secret_key_change_in_production
       EMAIL_USER: your_email@gmail.com
       EMAIL_PASS: your_app_password
