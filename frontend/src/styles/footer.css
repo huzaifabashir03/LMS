@@ -1,0 +1,27 @@
+/* footer.css - Footer styles */
+
+.footer {
+  background-color: var(--header-bg);
+  border-top: 1px solid var(--header-border);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  margin-top: auto;
+  transition: all var(--transition-normal);
+}
+
+.footer p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}

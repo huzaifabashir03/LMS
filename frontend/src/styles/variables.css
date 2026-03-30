@@ -1,0 +1,105 @@
+/* variables.css - Theme and color definitions */
+
+:root {
+  /* Light Mode Colors */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f2f5;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --text-light: #888888;
+  --text-muted: #aaaaaa;
+
+  /* Header & Navigation */
+  --header-bg: #ffffff;
+  --header-text: #1a1a1a;
+  --header-border: #e0e0e0;
+  
+  /* Colors */
+  --primary-color: #5b7cff;
+  --primary-light: #7b9fff;
+  --primary-dark: #3d5acc;
+  --secondary-color: #00d4ff;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
+
+  /* Backgrounds for messages */
+  --success-bg: #d1f4e8;
+  --error-bg: #fee2e2;
+  --warning-bg: #fef3c7;
+  --info-bg: #dbeafe;
+
+  /* Borders & Shadows */
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-mono: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode Colors */
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #f5f5f5;
+  --text-secondary: #d0d0d0;
+  --text-light: #999999;
+  --text-muted: #666666;
+
+  /* Header & Navigation */
+  --header-bg: #1a1a1a;
+  --header-text: #f5f5f5;
+  --header-border: #333333;
+
+  /* Colors - adjusted for dark mode */
+  --primary-color: #7b9fff;
+  --primary-light: #9bbfff;
+  --primary-dark: #5b7cff;
+  --secondary-color: #00d4ff;
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+  --info-color: #60a5fa;
+
+  /* Backgrounds for messages */
+  --success-bg: #064e3b;
+  --error-bg: #7f1d1d;
+  --warning-bg: #78350f;
+  --info-bg: #1e3a8a;
+
+  /* Borders & Shadows */
+  --border-color: #333333;
+  --border-light: #2d2d2d;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}

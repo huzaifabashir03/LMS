@@ -1,0 +1,156 @@
+/* messages.css - Alert, notification, and message styles */
+
+.message,
+.alert,
+.error,
+.success,
+.warning,
+.info {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 500;
+  animation: slideDown 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error {
+  background-color: var(--error-bg);
+  color: var(--error-color);
+  border-left: 5px solid var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
+.success {
+  background-color: var(--success-bg);
+  color: var(--success-color);
+  border-left: 5px solid var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.warning {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+  border-left: 5px solid var(--warning-color);
+  border: 1px solid var(--warning-color);
+}
+
+.info {
+  background-color: var(--info-bg);
+  color: var(--info-color);
+  border-left: 5px solid var(--info-color);
+  border: 1px solid var(--info-color);
+}
+
+.alert {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+  border-left: 5px solid var(--warning-color);
+  border: 1px solid var(--warning-color);
+}
+
+/* Message icons */
+.error::before {
+  content: '⚠️';
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.success::before {
+  content: '✓';
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.warning::before {
+  content: '⚠️';
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.info::before {
+  content: 'ℹ️';
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.message-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+  padding: 0;
+}
+
+.message-close:hover {
+  opacity: 1;
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  max-width: 400px;
+  z-index: 10000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .message,
+  .alert,
+  .error,
+  .success,
+  .warning,
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .message::before,
+  .alert::before,
+  .error::before,
+  .success::before,
+  .warning::before,
+  .info::before {
+    margin: 0;
+  }
+
+  .message-close {
+    margin: var(--spacing-md) 0 0 0;
+  }
+
+  .toast {
+    left: var(--spacing-lg);
+    right: var(--spacing-lg);
+    max-width: none;
+  }
+}
