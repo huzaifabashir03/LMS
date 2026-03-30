@@ -1,9 +1,18 @@
-const jwt = require('jsonwebtoken');
+import jwt from "jsonwebtoken";
 
+// Generate JWT Token
 const generateToken = (userId) => {
-    return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
-        expiresIn: '30d',
-    });
+    if (!process.env.JWT_SECRET) {
+        throw new Error("JWT_SECRET is not defined in environment variables");
+    }
+
+    return jwt.sign(
+        { id: userId },
+        process.env.JWT_SECRET,
+        {
+            expiresIn: process.env.JWT_EXPIRE || "30d",
+        }
+    );
 };
 
-module.exports = generateToken;
+export default generateToken;

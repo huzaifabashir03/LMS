@@ -6,7 +6,9 @@ import nodemailer from "nodemailer";
 
 // Helper function: Generate JWT
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
+  return jwt.sign({ id }, process.env.JWT_SECRET, { 
+    expiresIn: process.env.JWT_EXPIRE || "30d" 
+  });
 };
 
 // @desc    Register a new student
