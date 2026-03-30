@@ -6,8 +6,8 @@ import nodemailer from "nodemailer";
 
 // Helper function: Generate JWT
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { 
-    expiresIn: process.env.JWT_EXPIRE || "30d" 
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_EXPIRE || "30d",
   });
 };
 
@@ -31,7 +31,9 @@ export const signup = async (req, res) => {
 
     // Password validation (min 6 characters)
     if (password.length < 6) {
-      return res.status(400).json({ message: "Password must be at least 6 characters" });
+      return res
+        .status(400)
+        .json({ message: "Password must be at least 6 characters" });
     }
 
     // Check if email exists
@@ -85,7 +87,9 @@ export const login = async (req, res) => {
   try {
     // Validation
     if (!email || !password) {
-      return res.status(400).json({ message: "Email and password are required" });
+      return res
+        .status(400)
+        .json({ message: "Email and password are required" });
     }
 
     // Check user exists
